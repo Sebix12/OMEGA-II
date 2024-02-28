@@ -32,7 +32,7 @@ if not exist db mkdir db
 cd %db%
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db.zip', 'db.zip')"
 tar -xf db.zip
-rm db.zip
+del /q db.zip
 cd %defloc%
 goto :contldb
 ::------------

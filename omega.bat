@@ -1,4 +1,4 @@
-@set debug=true
+@set debug=false
 @if "%debug%" == "false" echo off
 title OMEGA
 
@@ -44,3 +44,5 @@ set /p terminal=">"
 goto :execcommand
 
 :execcommand
+call %kernel% %terminal%
+goto :terminal

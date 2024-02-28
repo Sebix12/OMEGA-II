@@ -25,3 +25,13 @@ MAIN variables:
     %defloc% = default location ; set defloc=%~dp0
     %db% == %defloc%\db : database folder ; set db=%defloc%db
     %kernel% = %defloc%\kernel.bat ; set kernel=%defloc%kernel.bat
+FS variables:
+
+omega.bat:
+    points:
+        :getkernel:
+            downloads kernel.bat
+        :getdbm:
+            downloads dbm.bat
+        :getldb:
+            downloads the latest database: db.zip

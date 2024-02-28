@@ -1,0 +1,1 @@
+@if "%debug%" == "false" echo off

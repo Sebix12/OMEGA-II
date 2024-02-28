@@ -9,6 +9,7 @@ Servers:
 #    - mirror1-xdev.lol:
 #        omega-kernel.mirror1-xdev.lol
 #        omega-db.mirror1-xdev.lol
+
 download files:
     -kernel: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
     -dbm: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/dbm.bat', 'dbm.bat')"
@@ -17,5 +18,10 @@ download files:
 encode - decode:
     -encode:
         certutil -encode filename.extension out.extension
-    -
+    -decode:
         certutil -decode filename.extension out.extension
+
+MAIN variables:
+    %defloc% = default location ; set defloc=%~dp0
+    %db% == %defloc%\db : database folder ; set db=%defloc%db
+    %kernel% = %defloc%\kernel.bat ; set kernel=%defloc%kernel.bat

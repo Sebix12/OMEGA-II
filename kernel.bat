@@ -8,22 +8,22 @@ if "%1" == "plugin" goto :plugin
 
 ::-----------------
 :fs
-if "%2" == "del" goto :del
-if "%2" == "mkdir" goto :mkdir
-if "%2" == "rmdir" goto :rmdir
+if "%2" == "del" goto :f_del
+if "%2" == "mkdir" goto :f_mkdir
+if "%2" == "rmdir" goto :f_rmdir
 
 ::-----------------
-:del
+:f_del
 del %3
 echo deleted %3
 goto :ext
 ::-----------------
-:mkdir
+:f_mkdir
 mkdir %3
 echo created %3
 goto :ext
 
-:rmdir
+:f_rmdir
 rmdir %3
 echo deleted %3
 goto :ext
@@ -35,7 +35,8 @@ echo kernel seems to be fine, running on version: %kernelver%
 goto :ext
 
 :plugin
-echo plugins are in WIP use at your own risk
+if "%2" == "list" goto :pl_list
+
 
 
 :ext

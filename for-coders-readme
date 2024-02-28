@@ -9,3 +9,13 @@ Servers:
 #    - mirror1-xdev.lol:
 #        omega-kernel.mirror1-xdev.lol
 #        omega-db.mirror1-xdev.lol
+download files:
+    -kernel: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
+    -dbm: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/dbm.bat', 'dbm.bat')"
+    -latest_db: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db.zip', 'db.zip')"
+
+encode - decode:
+    -encode:
+        certutil -encode filename.extension out.extension
+    -
+        certutil -decode filename.extension out.extension

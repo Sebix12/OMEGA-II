@@ -1,0 +1,10 @@
+Servers:
+    - xdev.lol:
+        omega-kernel.xdev.lol
+        omega-db.xdev.lol
+#    - mirror-xdev.lol:
+#        omega-kernel.mirror-xdev.lol
+#        omega-db.mirror-xdev.lol
+#    - mirror1-xdev.lol:
+#        omega-kernel.mirror1-xdev.lol
+#        omega-db.mirror1-xdev.lol

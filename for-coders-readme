@@ -2,6 +2,7 @@ Servers:
     - xdev.lol:
         omega-kernel.xdev.lol
         omega-db.xdev.lol
+#_________WIP__________________
 #    - mirror-xdev.lol:
 #        omega-kernel.mirror-xdev.lol
 #        omega-db.mirror-xdev.lol

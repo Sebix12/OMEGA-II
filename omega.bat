@@ -10,7 +10,7 @@ set currloc=%defloc%
 ::end
 
 ::check everything
-if not exist kernel.bat goto :get
+if not exist kernel.bat goto :getkernel
 :contkern
 if not exist dbm.bat goto :getdbm
 :contdbm

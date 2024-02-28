@@ -7,11 +7,25 @@ if "%1" == "plugin" goto :plugin
 if "%1" == "crypt" goto :crypt
 
 
+
 ::-----------------
 :fs
 if "%2" == "del" goto :f_del
 if "%2" == "mkdir" goto :f_mkdir
 if "%2" == "rmdir" goto :f_rmdir
+if "%2" == "compile" goto :compile
+if "%2" == "decompile" goto :decompile
+
+::-----------------
+:compile
+call dbm.bat compile
+goto :ext
+
+:decompile
+call dbm.bat decompile
+goto :ext
+
+::-----------------
 
 ::-----------------
 :f_del

@@ -36,3 +36,11 @@ omega.bat:
         :getldb:
             downloads the latest database: db.zip
 
+dbm.bat func folder file subfunc:
+    - compile
+    - decompile
+    - encode
+    - decode
+    - list
+    - run
+    - remove

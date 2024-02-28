@@ -4,6 +4,7 @@ title OMEGA - kernel
 if "%1" == "fs" goto :fs
 if "%1" == "checkup" goto :checkup
 if "%1" == "plugin" goto :plugin
+if "%1" == "crypt" goto :crypt
 
 
 ::-----------------
@@ -40,15 +41,31 @@ if "%2" == "run" goto :pl_run
 if "%2" == "remove" goto :pl_remove
 
 :pl_list
+call dbm.bat list
+goto :pl_ext
 
 :pl_run
+call dbm.bat run %3
+goto :pl_ext
 
 :pl_remove
+call dbm.bat remove %3
+goto :pl_ext
 
+:pl_ext
+goto :ext
 
+:crypt
+if "%2" == "encode" goto :crypt_encode
+if "%2" == "decode" goto :crypt_decode
 
+:crypt_encode
+call dbm.bat encode %3
+goto :ext
 
-
+:crypt_decode
+call dbm.bat decode %3
+goto :ext
 
 
 :ext

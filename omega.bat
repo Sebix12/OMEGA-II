@@ -6,6 +6,7 @@ title OMEGA
 set defloc=%~dp0
 set db=%defloc%db
 set kernel=%defloc%kernel.bat
+set currloc=%defloc%
 ::end
 
 ::check everything

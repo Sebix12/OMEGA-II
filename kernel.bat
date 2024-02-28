@@ -36,6 +36,18 @@ goto :ext
 
 :plugin
 if "%2" == "list" goto :pl_list
+if "%2" == "run" goto :pl_run
+if "%2" == "remove" goto :pl_remove
+
+:pl_list
+
+:pl_run
+
+:pl_remove
+
+
+
+
 
 
 

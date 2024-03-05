@@ -47,5 +47,5 @@ set /p terminal=">"
 goto :execcommand
 
 :execcommand
-call %kernel% %terminal%
+call "%kernel%" %terminal%
 goto :terminal

@@ -17,7 +17,10 @@ goto :ext
 
 :debug
 if "%2" == "off" echo off
+if "%2" == "off" set debug=true
 if "%2" == "on" echo on
+if "%2" == "on" echo on
+
 goto :ext
 
 :cls

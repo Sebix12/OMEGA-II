@@ -4,6 +4,7 @@ title OMEGA - kernel
 if "%1" == "fs" goto :fs
 if "%1" == "checkup" goto :checkup
 if "%1" == "plugin" goto :plugin
+if "%1" == "pl" goto :plugin
 if "%1" == "crypt" goto :crypt
 if "%1" == "cls" goto :cls
 if "%1" == "exit" goto :ext_all

@@ -7,7 +7,7 @@ fs:
 
 checkup: checks for corruption as text
 
-plugin:
+plugin: aka "pl"
     -list: plugin list; WIP
     -remove: plugin remove name
     -run: plugin run name

@@ -44,3 +44,12 @@ dbm.bat func folder file subfunc:
     - list
     - run
     - remove
+
+basic plugin code
+##begin
+@if "%debug%" == "false" echo off
+title <your_title>
+:begin
+
+##end
+

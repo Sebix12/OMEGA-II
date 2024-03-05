@@ -10,9 +10,9 @@ if "%1" == "exit" goto :ext_all
 if "%1" == "help" goto :kernel_help
 if "%1" == "kernel" goto :kernel
 if "%1" == "debug" goto :debug
-
 echo command not found
 goto :ext
+
 
 
 :debug

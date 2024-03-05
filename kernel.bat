@@ -5,6 +5,30 @@ if "%1" == "fs" goto :fs
 if "%1" == "checkup" goto :checkup
 if "%1" == "plugin" goto :plugin
 if "%1" == "crypt" goto :crypt
+if "%1" == "cls" goto :cls
+if "%1" == "exit" goto :ext_all
+if "%1" == "help" goto :kernel_help
+if "%1" == "kernel" goto :kernel
+if "%1" == "debug" goto :debug
+echo command not found
+goto :ext
+
+
+
+:debug
+if "%2" == "off" echo off
+if "%2" == "off" set debug=true
+if "%2" == "on" echo on
+if "%2" == "on" echo on
+
+goto :ext
+
+:cls
+cls
+goto :ext
+
+:ext_all
+exit
 
 
 
@@ -26,7 +50,15 @@ call dbm.bat decompile
 goto :ext
 
 ::-----------------
+:kernel
+if "%2" == "version" echo kernel version: %kernelver%
+if "%2" == "help" goto :kernel_help
+goto :ext
 
+:kernel_help
+type "%defloc%help.db"
+echo.
+goto :ext
 ::-----------------
 :f_del
 del %3

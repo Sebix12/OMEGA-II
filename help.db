@@ -1,0 +1,29 @@
+fs:
+    -del: fs del file; deletes a file
+    -mkdir: fs mkdir folder; creates a folder
+    -rmdir: fs rmdir folder
+    -compile: fs compile
+    -decompile: fs decompile
+
+checkup: checks for corruption as text
+
+plugin:
+    -list: plugin list; WIP
+    -remove: plugin remove name
+    -run: plugin run name
+
+crypt:
+    -encode: crypt encode name
+    -decode: crypt decode name
+
+cls: clears the terminal
+
+exit: exits
+
+kernel:
+    -version: kernel version; shows the kernel version
+    -help: kernel help; shows this menu; also known as "help"
+
+debug:
+    -on
+    -off

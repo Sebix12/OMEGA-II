@@ -39,7 +39,7 @@ goto :ext
 
 
 :list
-echo not working rn
+echo not working rn 
 goto :ext
 
 :run

@@ -5,6 +5,15 @@ if "%1" == "fs" goto :fs
 if "%1" == "checkup" goto :checkup
 if "%1" == "plugin" goto :plugin
 if "%1" == "crypt" goto :crypt
+if "%1" == "cls" goto :cls
+echo command not found
+goto :ext
+
+
+:cls
+cls
+goto :ext
+
 
 
 

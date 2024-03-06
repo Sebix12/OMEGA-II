@@ -1,5 +1,8 @@
 @set debug=false
 @if "%debug%" == "false" echo off
+if not exist help.db echo installing help
+if not exist help.db powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/help.db', 'help.db')"
+
 title OMEGA
 cls
 
@@ -23,9 +26,7 @@ goto :start
 ::code for check
 :getkernel
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
-if exist  echo 
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/help.db', 'help.db')"
-echo downloaded kernel
+if exist kernel.bat echo installed kernel 
 goto :contkern
 ::------------
 :getdbm

@@ -31,9 +31,9 @@ goto :contdbm
 :getldb
 if not exist db mkdir db
 cd %db%
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db.zip', 'db.zip')"
-tar -xf db.zip
-del /q db.zip
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db/gitlist.bat', 'dbm.bat')"
+if exist gitlist.bat call gitlist.bat
+if not exist gitlist.bat echo gitist does not exist
 cd %defloc%
 goto :contldb
 ::------------

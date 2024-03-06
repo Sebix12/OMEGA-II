@@ -12,6 +12,7 @@ plugin: aka "pl"
     -list: plugin list; WIP
     -remove: plugin remove name
     -run: plugin run name
+    -get: pl get name; downloads plugins from the official Sebix12/OMEGA-II-plugin-repo/main/ repo
 
 crypt:
     -encode: crypt encode name

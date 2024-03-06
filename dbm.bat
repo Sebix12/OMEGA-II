@@ -45,9 +45,14 @@ echo not working rn
 goto :ext
 
 :run
+if not exist %2.db goto :runnotexist 
 certutil -decode %2.db %2.bat >> NUL
 call %2.bat
 del /q %2.bat
+goto :ext
+
+:runnotexist
+echo %2 does not exist try "help"
 goto :ext
 
 :remove

@@ -92,6 +92,8 @@ goto :ext
 if "%2" == "list" goto :pl_list
 if "%2" == "run" goto :pl_run
 if "%2" == "remove" goto :pl_remove
+if "%2" == "get" goto :pl_get
+
 
 :pl_list
 call dbm.bat list
@@ -104,6 +106,9 @@ goto :pl_ext
 :pl_remove
 call dbm.bat remove %3
 goto :pl_ext
+
+:pl_get
+call dbm.bat get %3
 
 :pl_ext
 goto :ext

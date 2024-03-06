@@ -7,6 +7,8 @@ if "%1" == "decode" goto :decode
 if "%1" == "list" goto :list
 if "%1" == "run" goto :run
 if "%1" == "remove" goto :remove
+if "%1" == "get" goto :getpl
+
 
 
 ::----------------crypt-----------------
@@ -51,6 +53,15 @@ goto :ext
 :remove
 if exist %2.bat del /q %2.bat
 if exist %2.db del /q %2.db
+goto :ext
+
+:getpl
+echo downloading %2
+if exist %2.db echo %2 is already downloaded
+if exist %2.db goto :ext
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II-plugin-repo/main/%2.db', '%2.db')"
+if exist %2.db echo downloaded
+if not exist %2.db echo download failed
 goto :ext
 
 :ext

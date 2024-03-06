@@ -41,7 +41,7 @@ goto :ext
 
 
 :list
-echo not working rn 
+dir /b /x *.db
 goto :ext
 
 :run

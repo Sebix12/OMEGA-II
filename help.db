@@ -9,7 +9,7 @@ fs:
 checkup: checks for corruption as text
 
 plugin: aka "pl"
-    -list: plugin list; WIP
+    -list: plugin list;
     -remove: plugin remove name
     -run: plugin run name
     -get: pl get name; downloads plugins from the official Sebix12/OMEGA-II-plugin-repo/main/ repo

@@ -1,59 +1,117 @@
 Servers:
+
     - xdev.lol:
+
         omega-kernel.xdev.lol
+
         omega-db.xdev.lol
+
 #_________WIP__________________
+
 #    - mirror-xdev.lol:
+
 #        omega-kernel.mirror-xdev.lol
+
 #        omega-db.mirror-xdev.lol
+
 #    - mirror1-xdev.lol:
+
 #        omega-kernel.mirror1-xdev.lol
+
 #        omega-db.mirror1-xdev.lol
 
+
+
 download files:
+
     -kernel: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
+
     -dbm: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/dbm.bat', 'dbm.bat')"
+
     -latest_db: powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db.zip', 'db.zip')"
 
+
+
 encode - decode:
+
     -encode:
+
         certutil -encode filename.extension out.extension
+
     -decode:
+
         certutil -decode filename.extension out.extension
 
+
+
 MAIN variables:
+
     %defloc% = default location ; set defloc=%~dp0
+
     %db% == %defloc%\db : database folder ; set db=%defloc%db
+
     %kernel% = %defloc%\kernel.bat ; set kernel=%defloc%kernel.bat
+
 FS variables:
 
+
+
 omega.bat:
+
     points:
+
         :getkernel:
+
             downloads kernel.bat
+
         :getdbm:
+
             downloads dbm.bat
+
         :getldb:
+
             downloads the latest database: db.zip
 
+
+
 dbm.bat func folder file subfunc:
+
     - compile
+
     - decompile
+
     - encode
+
     - decode
+
     - list
+
     - run
+
     - remove
 
+
+
 basic plugin code
+
 ##begin
+
 @if "%debug%" == "false" echo off
+
 title <your_title>
+
 :begin
+
+
 
 ##end
 
+
+
 just added an editor: pl run editor
+
     read: read
+
     write: write
+
     edit: edit; type exit to exit

@@ -22,6 +22,7 @@ goto :start
 ::code for check
 :getkernel
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/help.db', 'help.db')"
 echo downloaded kernel
 goto :contkern
 ::------------

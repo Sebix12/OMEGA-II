@@ -1,6 +1,7 @@
 @set debug=false
 @if "%debug%" == "false" echo off
 title OMEGA
+cls
 
 ::vars
 set defloc=%~dp0

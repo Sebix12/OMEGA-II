@@ -18,10 +18,9 @@ goto :ext
 
 :debug
 if "%2" == "off" echo off
-if "%2" == "off" set debug=true
+if "%2" == "off" set debug=false
 if "%2" == "on" echo on
-if "%2" == "on" echo on
-
+if "%2" == "on" set debug=true
 goto :ext
 
 :cls
@@ -38,8 +37,11 @@ exit
 if "%2" == "del" goto :f_del
 if "%2" == "mkdir" goto :f_mkdir
 if "%2" == "rmdir" goto :f_rmdir
+if "%2" == "run" goto :f_run
 if "%2" == "compile" goto :compile
 if "%2" == "decompile" goto :decompile
+echo fs command not found
+goto :ext
 
 ::-----------------
 :compile
@@ -76,6 +78,10 @@ rmdir %3
 echo deleted %3
 goto :ext
 
+::-----------------
+:f_run
+call %3
+goto :ext
 ::-----------------
 
 :checkup

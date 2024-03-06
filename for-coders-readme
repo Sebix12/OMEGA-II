@@ -53,3 +53,7 @@ title <your_title>
 
 ##end
 
+just added an editor: pl run editor
+    read: read
+    write: write
+    edit: edit; type exit to exit

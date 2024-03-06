@@ -2,6 +2,7 @@ fs:
     -del: fs del file; deletes a file
     -mkdir: fs mkdir folder; creates a folder
     -rmdir: fs rmdir folder
+    -run: fs run file (it just call-s it)
     -compile: fs compile
     -decompile: fs decompile
 

@@ -22,16 +22,18 @@ goto :start
 ::code for check
 :getkernel
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
+echo downloaded kernel
 goto :contkern
 ::------------
 :getdbm
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/dbm.bat', 'dbm.bat')"
+echo downloaded dbm
 goto :contdbm
 ::------------
 :getldb
 if not exist db mkdir db
 cd %db%
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db/gitlist.bat', 'dbm.bat')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db/gitlist.bat', 'gitlist.bat')"
 if exist gitlist.bat call gitlist.bat
 if not exist gitlist.bat echo gitist does not exist
 cd %defloc%

@@ -29,7 +29,9 @@ goto :start
 ::code for check
 :getkernel
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
-if exist kernel.bat echo installed kernel 
+if exist kernel.bat echo installed kernel
+echo runnin checkup
+if exist kernel.bat call kernel.bat checkup
 goto :contkern
 ::------------
 :getdbm

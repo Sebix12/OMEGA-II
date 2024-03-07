@@ -1,5 +1,5 @@
 @if "%debug%" == "false" echo off
-set kernelver=1.0
+set kernelver=1.9.2
 title OMEGA - kernel
 if "%1" == "fs" goto :fs
 if "%1" == "checkup" goto :checkup

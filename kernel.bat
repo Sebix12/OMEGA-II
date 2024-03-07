@@ -81,6 +81,9 @@ goto :ext
 
 ::-----------------
 :f_run
+if not exist %3 echo %3 does not exist, canceling.
+if not exist %3 goto :ext
+if exist %3 echo %3 found, running it...
 call %3
 goto :ext
 ::-----------------

@@ -14,10 +14,13 @@ set currloc=%defloc%
 ::end
 
 ::check everything
+if not exist kernel.bat echo Kernel Not Found Installing
 if not exist kernel.bat goto :getkernel
 :contkern
+if not exist dbm.bat echo DataBaseManager Not Found Installing 
 if not exist dbm.bat goto :getdbm
 :contdbm
+if not exist db echo DataBase Not Found Installing
 if not exist db goto :getldb
 :contldb
 ::dont know what to check so ill put stuff later
@@ -54,5 +57,23 @@ set /p terminal=">"
 goto :execcommand
 
 :execcommand
-call "%kernel%" %terminal%
+if exist "%kernel%" call "%kernel%" %terminal%
+if not exist "%kernel%" goto :kernelerror
+goto :terminal
+
+::debugging
+:kernelerror
+echo KERNEL_ERROR -------------------------------------------------------------
+echo Kernel is not found trying to download and retrying
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
+if exist kernel.bat echo installed kernel
+echo KERNEL_ERROR -------------------------------------------------------------
+if exist kernel.bat goto :execcommand
+if not exist kernel.bat goto :kernelerrorgetkernelerror
+goto :terminal
+
+:kernelerrorgetkernelerror
+echo download failed, exitting.
+pause
+exit
 goto :terminal

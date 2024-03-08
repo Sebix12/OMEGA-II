@@ -115,3 +115,22 @@ just added an editor: pl run editor
     write: write
 
     edit: edit; type exit to exit
+    
+plugins:
+    backup
+    clean-temp
+    clear-event-logs      
+    clear-printer
+    deploy-file-to-systems
+    dhcp-watchdog
+    disable-hotkey        
+    download
+    editor
+    enable-rdp
+    java-runtime-nuker    
+    map-printers
+    pingup
+    repair-windows-update 
+    repair_wmi
+    setip
+    whos-on 

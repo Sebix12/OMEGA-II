@@ -20,7 +20,7 @@ if exist %2.db echo encoded successfully.
 goto :ext
 
 :decode
-if exist %2.db certutil -encode %2.db %2.bat >> NUL
+if exist %2.db certutil -decode %2.db %2.bat >> NUL
 if exist %2.db del /q %2.db
 if exist %2.bat echo decoded successfully.
 goto :ext

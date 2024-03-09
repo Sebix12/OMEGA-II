@@ -8,8 +8,10 @@ set github=https://raw.githubusercontent.com/Sebix12/OMEGA-II-plugin-repo/main/
 ::vars end
 
 ::files
-powershell -Command "(New-Object Net.WebClient).DownloadFile('%github%editor.db', 'editor.db')"
-if exist editor.db echo downloaded tool - editor
+set gitlistpl=editor
+powershell -Command "(New-Object Net.WebClient).DownloadFile('%github%%gitlistpl%.db', '%gitlistpl%.db')" && if exist %gitlistpl%.db echo downloaded tool - %gitlistpl%
+set gitlistpl=download
+powershell -Command "(New-Object Net.WebClient).DownloadFile('%github%%gitlistpl%.db', '%gitlistpl%.db')" && if exist %gitlistpl%.db echo downloaded tool - %gitlistpl%
 
 ::exit
 :ext

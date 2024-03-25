@@ -59,7 +59,7 @@ set /p terminal=">"
 goto :execcommand
 
 :execcommand
-if not defined terminal echo command not found && goto :terminal
+if not defined terminal goto :terminal
 if exist "%kernel%" call "%kernel%" %terminal%
 if not exist "%kernel%" goto :kernelerror
 goto :terminal

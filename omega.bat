@@ -30,7 +30,7 @@ goto :start
 :getkernel
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
 if exist "%kernel%" echo installed kernel
-echo runnin checkup
+echo running checkup
 if exist "%kernel%" call "%kernel%" checkup
 goto :contkern
 ::------------
@@ -59,6 +59,7 @@ set /p terminal=">"
 goto :execcommand
 
 :execcommand
+if not defined terminal echo command not found && goto :terminal
 if exist "%kernel%" call "%kernel%" %terminal%
 if not exist "%kernel%" goto :kernelerror
 goto :terminal

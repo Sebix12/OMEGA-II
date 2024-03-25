@@ -107,7 +107,7 @@ if not exist %defloc%omega.bat echo installing omega && powershell -Command "(Ne
 if not exist %kernel% echo imstalling kernel && powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/kernel.bat', 'kernel.bat')"
 if not exist %defloc%help.db echo installing help db && powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/help.db', 'help.db')"
 if not exist %defloc%dbm.bat echo installing DataBaseManager && powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/dbm.bat', 'dbm.bat')"
-if not exist %db% echo creating DataBase Folder && if not exist db mkdir db | echo folder created && cd %db% && powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db/gitlist.bat', 'gitlist.bat')" && if exist gitlist.bat call gitlist.bat && cd %defloc% && echo installed Databbase
+if not exist %db% echo creating DataBase Folder && if not exist db mkdir db | echo folder created && cd %db% && powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Sebix12/OMEGA-II/main/db/gitlist.bat', 'gitlist.bat')" && if exist gitlist.bat call gitlist.bat && cd %defloc% && echo installed Database
 ::exit
 echo :----------------------------:
 goto :ext

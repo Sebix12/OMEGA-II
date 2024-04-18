@@ -134,4 +134,4 @@ plugins:
     repair-windows-update 
     repair_wmi
     setip
-    whos-on 
+    whos-on

@@ -74,7 +74,7 @@ omega.bat:
 
 
 
-dbm.bat func folder file subfunc:
+dbm.bat func subfunc/(file;If required for processing):
 
     - compile
 

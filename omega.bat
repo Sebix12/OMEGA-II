@@ -6,6 +6,10 @@ if not exist help.db powershell -Command "(New-Object Net.WebClient).DownloadFil
 title OMEGA
 cls
 
+::experimental features
+set MultiWindowSupport=false
+::end
+
 ::vars
 set defloc=%~dp0
 set db=%defloc%db
@@ -53,6 +57,10 @@ goto :contldb
 ::end : start
 :start
 
+::EXPERIMENTAL
+if "%MultiWindowSupport%" == "true" goto :multiwinterm 
+::EXPERIMENTAL END
+
 :terminal
 set terminal=
 set /p terminal=">"
@@ -63,6 +71,18 @@ if not defined terminal goto :terminal
 if exist "%kernel%" call "%kernel%" %terminal%
 if not exist "%kernel%" goto :kernelerror
 goto :terminal
+
+::EXPERIMENTAL
+:multiwinterm
+::EXPERIMENTAL END
+
+
+
+
+
+
+
+
 
 ::debugging
 :kernelerror

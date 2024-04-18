@@ -106,6 +106,7 @@ title <your_title>
 
 ##end
 
+Also you MUST encrypt it whit: certutil -encode, and name it <yourfile>.db, or it wont be detected by dbm, and also you can run it at the home location, whit: fs run <file>.bat
 
 
 just added an editor: pl run editor
